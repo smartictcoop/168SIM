@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<!-- version 1.2 -->
+<struts>
+    <constant name="struts.devMode" value="true" />
+    
+
+    <package name="168SIM" extends="struts-default">
+        <global-results>
+            <result name="login">/login.jsp</result>
+            <result name="noaccess">/noaccess.jsp</result>
+            <result name="getCustomer">/index.jsp</result>
+        </global-results>
+
+        <action name="getUser" class="sim168.user.UserAction" method="execute">
+            <result name="success">/tables.jsp</result>
+            <!-- <result name="error" type="redirectAction">home</result> -->
+        </action>
+   	</package>   
+</struts>
